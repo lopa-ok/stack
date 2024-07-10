@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Animation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Indie+Flower&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Fredoka One', impact;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 70px;
+            color: rgb(200, 200, 210);
+            height: 100px;
+            position: relative;
+        }
+
+        span {
+            position: relative;
+            top: 40px;
+            animation: move 0.5s ease-in-out infinite alternate;
+            display: inline-block;
+        }
+
+        span:nth-child(1) { --i: 1; }
+        span:nth-child(2) { --i: 2; }
+        span:nth-child(3) { --i: 3; }
+        span:nth-child(4) { --i: 4; }
+
+        @keyframes move {
+            100% {
+                top: -30px;
+                text-shadow: 
+                    0 3px red, 
+                    0 6px grey, 
+                    0 9px gold, 
+                    0 11px green, 
+                    0 13px purple, 
+                    0 14px cyan, 
+                    0 15px orangered;
+            }
+        }
+
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> 
+        <span>L</span> 
+        <span>O</span> 
+        <span>P</span> 
+        <span>A</span> 
+    </h1>
+</body>
+</html>
